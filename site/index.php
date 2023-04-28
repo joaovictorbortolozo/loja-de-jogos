@@ -35,36 +35,45 @@ include "cabecalho.php";
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid esse suscipit fugit dignissimos, perspiciatis sit eveniet veniam, consectetur reiciendis doloremque sunt, officia distinctio? Corporis eos ad quam, optio impedit nostrum?</p>
     </div>
     <div class="row mt-5">
-
-
         <?php
-        for ($i = 0; $i < 2; $i++) :
+        $servidor_bd = "127.0.0.1";
+        $usuario_bd = "root";
+        $senha_bd = "";
+        $banco_de_dados = "delivery_jogos_novo";
+
+        $conexao = mysqli_connect($servidor_bd, $usuario_bd, $senha_bd, $banco_de_dados);
+
+        $sql_buscar = "select * from jogo";
+
+        $todos_os_jogos = mysqli_query($conexao, $sql_buscar);
+
+        while ($um_jogo = mysqli_fetch_assoc($todos_os_jogos)) :
+
         ?>
             <div class="col-md-3 text-center">
-                <img src="img/forzam.png" class="img-fluid">
-                <h2 class="mb-1">Forza Motorsport</h2>
-                <a href="nomedojogo.php" class="btn btn-primary mb-2">VER MAIS</a>
-            </div>
-            <div class="col-md-3 text-center">
-                <img src="img/forza.png" class="img-fluid">
-                <h2 class="mb-1">Forza horizon 5</h2>
-                <a href="nomedojogo.php" class="btn btn-primary mb-2">VER MAIS</a>
-            </div>
-
-            <div class="col-md-3 text-center">
-                <img src="img/as.png" class="img-fluid">
-                <h2 class="mb-1">Assanssin's Creed</h2>
-                <a href="nomedojogo.php" class="btn btn-primary mb-2">VER MAIS</a>
-            </div>
-
-            <div class="col-md-3 text-center">
-                <img src="img/halo.png" class="img-fluid">
-                <h2 class="mb-1">Halo 4 </h2>
-                <a href="nomedojogo.php" class="btn btn-primary mb-5">VER MAIS</a>
+                <img src=<?php echo $um_jogo["foto"]; ?> class="img-fluid" style="object-fit: cover; height: 150px; width: 100%; object-position: top center;">
+                <h2 class="mb-1"><?php echo $um_jogo["titulo"]; ?></h2>
+                <?php
+                $cor = "";
+                if (strtoupper($um_jogo["Categoria"]) == "FPS") {
+                    $cor = "red";
+                } else if (strtoupper($um_jogo["Categoria"]) == "Corrida") {
+                    $cor = "red";
+                }
+                else if (strtoupper($um_jogo["Categoria"]) == "Ação/Aventura") {
+                $cor = "red";
+                }
+                ?>
+                <h5 class="mt-3 mb-3" style = "color:<?php echo $cor;?>">
+                <?php echo $um_jogo["Categoria"]; ?> </h5>
+                <a href=<?php echo $um_jogo["video"]; ?> class="btn btn-primary mb-2">VER MAIS</a>
             </div>
         <?php
-        endfor;
+        endwhile;
         ?>
+
+
+
     </div>
 </div>
 <div class="col-12 text-center mb-3">
