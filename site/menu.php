@@ -8,8 +8,8 @@
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 </ul>
                 <form class="d-flex" action="login.php" method="post">
-                    <input class="form-control me-2" type="E-mail" placeholder="E-mail">
-                    <input class="form-control me-2" type="password" placeholder="Senha">
+                    <input class="form-control me-2" type="email" name="email" placeholder="E-mail">
+                    <input class="form-control me-2" type="password" name="senha" placeholder="Senha">
                     <button class="btn btn-outline-success me-2" type="submit">Entrar</button>
                     <a href="novo-usuario.php" class="btn btn-outline-primary">Cadastrar</a>
                 </form>
