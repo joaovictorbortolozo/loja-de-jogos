@@ -5,7 +5,7 @@ $nome = $_POST["nome"];
 
 include "conexao.php";
 
-$sql_inserir_usuario = " insert into usuario (nome,email,senha ) values('$nome','$email','$senha')";
+$sql_inserir_usuario = " insert into usuario (nome,email,senha ) values('$nome','$email', ' ".md5($senha). " ' )";
 
 $um_usuario = mysqli_query($conexao, $sql_inserir_usuario); 
 
