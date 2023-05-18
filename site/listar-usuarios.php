@@ -24,7 +24,14 @@ include "menu-sistema.php";
                         <td> <?php echo $um_usuario["id"]; ?> </td>
                         <td> <?php echo $um_usuario["nome"]; ?> </td>
                         <td> <?php echo $um_usuario["email"]; ?> </td>
-                        <td> <img src="img/lixo.png" width="50"></td>
+                        <td>
+                            <a href="excluir-usuario.php?id= <?php echo $um_usuario["id"]; ?>">
+                                <img src="img/lixo.png" width="50">
+                            </a>
+                            <a href="ver-usuario.php?id=<?php echo $um_usuario["id"]; ?>"> VER</a>
+
+                            <a href="editar-usuario.php?id=<?php echo $um_usuario["id"]; ?>"> EDITAR</a>
+                        </td>
                     </tr>
                 <?php
                 endwhile;

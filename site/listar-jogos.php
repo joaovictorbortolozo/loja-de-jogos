@@ -27,8 +27,14 @@ include "menu-sistema.php";
                             <a href="excluir-jogos.php?id= <?php echo $um_jogo["id"]; ?>">
                                 <img src="img/lixo.png" width="50">
                             </a>
+                            <a href="ver-jogo.php?id=<?php echo $um_jogo["id"]; ?>">
+                                <img src="img/lupa.jpg" width="50">
+                            </a>
+
+                            <a href="editar-jogo.php?id=<?php echo $um_jogo["id"]; ?>">
+                                <img src="img/lapis.png" width="50">
+                            </a>
                         </td>
-                        <td>
                     </tr>
                 <?php
                 endwhile;
