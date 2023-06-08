@@ -3,33 +3,10 @@ include "menu.php";
 include "cabecalho.php";
 ?>
 
-<div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner">
-        <div class="carousel-item active" data-bs-interval="3000">
-            <img src="img/forza.png" class="d-block w-100" alt="...">
-        </div>
-        <div class="carousel-item" data-bs-interval="3000">
-            <img src="img/forzam.png" class="d-block w-100" alt="...">
-        </div>
-        <div class="carousel-item" data-bs-interval="3000">
-            <img src="img/halo-infinite.png" class="d-block w-100" alt="...">
-        </div>
-        <div class="carousel-item" data-bs-interval="3000">
-            <img src="img/as.png" class="d-block w-100" alt="...">
-        </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-    </button>
 </div>
 <div class="container mt-5">
     <div class="col-12 text-center">
-        <h1>Jogos em destaque</h1>
+        <h1>Celulres em destaque</h1>
     </div>
     <div class="col-12 text-center">
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid esse suscipit fugit dignissimos, perspiciatis sit eveniet veniam, consectetur reiciendis doloremque sunt, officia distinctio? Corporis eos ad quam, optio impedit nostrum?</p>

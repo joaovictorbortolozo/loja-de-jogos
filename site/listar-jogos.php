@@ -5,7 +5,7 @@ include "menu-sistema.php";
 <div class="container">
     <div class="row">
         <div class="col text-center mt-3 mb-3">
-            <h1>Lista de Jogos</h1>
+            <h1>Lista de Produtos</h1>
             <table class="table table-dark table-borderless">
                 <td>Código</td>
                 <td>Título</td>

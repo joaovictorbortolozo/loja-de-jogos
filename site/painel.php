@@ -5,7 +5,7 @@ include "menu-sistema.php";
 
 <div class="container">
     <div class="col">
-        <a href="listar-jogos.php">Gerenciar Jogos</a>
+        <a href="listar-jogos.php">Gerenciar Produtos</a>
         <a href="listar-usuarios.php">Gerenciar Usuários</a>
     </div>
 </div>
